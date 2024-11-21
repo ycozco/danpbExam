@@ -17,18 +17,28 @@ repositories {
 	mavenCentral()
 }
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.postgresql:postgresql'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation 'org.springframework.boot:spring-boot-starter-validation' // Asegúrate de que está aquí
+	// Starter para aplicaciones web (incluye Spring MVC y Tomcat)
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+	// Starter para interactuar con bases de datos mediante JPA/Hibernate
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	
+	// Driver para PostgreSQL
+	implementation 'org.postgresql:postgresql'
 
-    // Herramientas de desarrollo
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// Starter de seguridad para manejo de HTTPS y certificados
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 
-    // Dependencias para pruebas
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// Para monitorear y administrar el servicio (actuador)
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// Herramientas de desarrollo (recarga automática)
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// Dependencias para pruebas
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 
