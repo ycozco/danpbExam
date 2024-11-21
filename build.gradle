@@ -19,20 +19,18 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    
-    // Driver para PostgreSQL
     implementation 'org.postgresql:postgresql'
-
-    // Spring Security
     implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-validation' // Asegúrate de que está aquí
 
     // Herramientas de desarrollo
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
-    // Pruebas
+    // Dependencias para pruebas
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
+
 
 tasks.named('test') {
 	useJUnitPlatform()
