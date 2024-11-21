@@ -5,7 +5,8 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copiar el archivo JAR del proyecto al contenedor
-COPY target/api-docker.jar app.jar
+COPY build/libs/*.jar app.jar
+
 
 # Exponer el puerto en el que correrá la aplicación
 EXPOSE 8080
