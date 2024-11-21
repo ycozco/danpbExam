@@ -27,6 +27,10 @@ dependencies {
 	// Driver para PostgreSQL
 	implementation 'org.postgresql:postgresql'
 
+	  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'mysql:mysql-connector-java'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
 	// Starter de seguridad para manejo de HTTPS y certificados
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 
